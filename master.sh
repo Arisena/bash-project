@@ -19,7 +19,7 @@ clear
 
 menu=( '1. File Operations' '2. User Operations' '3. Locating Information' '4. Fun Stuff' '5. Process Menu' '6. Exit' '7. Shut down' )
 
-echo -e "$gray Numbers Only"
+echo -e $gray"Numbers Only"
 echo -e "$gray-MainMenu-"
 for element in "${menu[@]}"
 do
