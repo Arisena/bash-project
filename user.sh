@@ -34,6 +34,22 @@ lower=${choice,,}
 case $lower in
 	#Create User
 	1)
+		exist=0
+		echo "User Creation Mode"
+		read -p $'What would you like the username to be? ' user
+		read -p $'What would you like the comment to be? ' com
+		while [ $exist -eq 0 ]
+		do
+			read -p $'What would you like the group to be? ' group
+			if grep -q $group /etc/group
+				echo "Group Exists"
+				exist=1
+			else
+				echo "Group not found"
+			fi
+		done
+		useradd -c $com -g $group $user
+		grep $user /etc/passwd
 		;;
 	#Change User Group
 	2)
