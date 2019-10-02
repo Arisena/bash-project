@@ -21,7 +21,7 @@ lower=${choice,,}
 case $lower in
 	#File Creation
 	1)
-		back=0
+		echo "File Creation"
 		echo "Please use full path for a different directory"
 		read -p $'What file do you want to create? ' file
 		touch $file
@@ -30,7 +30,6 @@ case $lower in
 			ls $file
 			sleep 4
 			clear
-			back=1
 		else
 			echo "Failed to create file"
 			sleep 4
@@ -39,6 +38,7 @@ case $lower in
 		;;
 	#File Deletion
 	2)
+		echo "File Deletion"
 		echo "Please use full path"
 		echo "Directories not supported"
 		read -p $'What file do you want to delete? ' file
@@ -54,6 +54,8 @@ case $lower in
 		fi
 		;;
 	3)
+		echo "Create Directory"
+		echo "Please use full path"
 		;;
 	4)
 		;;
