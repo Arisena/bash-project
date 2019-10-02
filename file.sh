@@ -15,9 +15,10 @@ clear
 while [ -z "$go" ]
 do
 
-menu=( '1. Create File' '2. Delete File' '3. Create Directory' '4. Delete Directory' '5. Create SymLink' '6. Change Ownership of file' '7. Change Permissions of file' '8. Modify Text' '9. Return to main menu' '10. Shutdown' )
+menu=( '1. Create File' '2. Delete File' '3. Create Directory' '4. Delete Directory' '5. Create SymLink' '6. Change Ownership of file' '7. Change Permissions of file' '8. Modify Text' '9. Return to Main Menu' '10. Shutdown' )
 
 echo "Numbers Only"
+
 echo "-FileOperations-"
 for element in "${menu[@]}"
 do
