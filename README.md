@@ -1,5 +1,5 @@
 # **Bash Project for Linu  Server**
-#####Noah Is Gey
+
 ## master.sh [x] 
 - [x] 1.File operations
 - [x] 2.User Operations
