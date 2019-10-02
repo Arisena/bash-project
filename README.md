@@ -8,6 +8,7 @@
 - [x]5.Process menu
 - [x]6.Exit
 - [x]7.Shut down
+- [x]Colors
 
 ## file.sh [x]
 - [x]1.Create a file
@@ -20,6 +21,7 @@
 - [x]8.Modify text within a file
 - [x]9.Return to main menu
 - [x]10.Shut down
+- [ ]Colors
 
 ## user.sh [ ]
 - [ ]1.Create a user
@@ -29,6 +31,7 @@
 - [ ]5.Change a password
 - [ ]6.Return to Main Menu
 - [ ]7.Shut down
+- [ ]Colors
 
 ## locate.sh [ ]
 - [ ]1.Find text within a file
@@ -37,6 +40,7 @@
 - [ ]4.Bring up the man pages for a command
 - [ ]5.Return to Main Menu
 - [ ]6.Shut down
+- [ ]Colors
 
 ## process.sh [ ]
 - [ ]1.Show all processes
@@ -45,6 +49,7 @@
 - [ ]4.Change priority for a running process
 - [ ]5.Return to Main Menu
 - [ ]6.Shut down
+- [ ]Colors
 
 ## fun.sh [ ]
 Anything Fun
