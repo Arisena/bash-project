@@ -65,7 +65,7 @@ case $lower in
 	5)
 		;;
 	6)
-		exit
+		exit 0
 		;;
 	7)
 		shutdown
