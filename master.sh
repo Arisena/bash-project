@@ -29,8 +29,10 @@ case $lower in
 		./locate.sh
 		;;
 	4)
+		./fun.sh
 		;;
 	5)
+		./process.sh
 		;;
 	6)
 		exit
@@ -40,6 +42,7 @@ case $lower in
 		;;
 	*)
 		echo "Invalid Input"
+		sleep 4
 		;;
 esac
 done
