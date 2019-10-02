@@ -19,7 +19,7 @@ do
 
 menu=( '1. Create File' '2. Delete File' '3. Create Directory' '4. Delete Directory' '5. Create SymLink' '6. Change Ownership of file' '7. Change Permissions of file' '8. Modify Text' '9. Return to Main Menu' '10. Shutdown' )
 
-echo -e "$gray Numbers Only"
+echo -e $gray"Numbers Only"
 
 echo -e "$gray-FileOperations-"
 for element in "${menu[@]}"
@@ -39,12 +39,12 @@ case $lower in
 		read -p $'What file do you want to create? ' file
 		touch $file
 		if [[ -f $(bash -c "echo $file") ]]; then
-			echo "File Created"
+			echo -e $green"File Created"$white
 			ls $file
 			sleep 4
 			clear
 		else
-			echo "Failed to create file"
+			echo -e $red"Failed to create file"$white
 			sleep 4
 			clear
 		fi
@@ -57,11 +57,11 @@ case $lower in
 		read -p $'What file do you want to delete? ' file
 		if [[ -f $(bash -c "echo $file") ]]; then
 			rm $file
-			echo "File Deleted"
+			echo -e $green"File Deleted"$white
 			sleep 4
 			clear
 		else
-			echo "Failed to delete file"
+			echo -e $red"Failed to delete file"$white
 			sleep 4
 			clear
 		fi
@@ -73,11 +73,11 @@ case $lower in
 		read -p $'What directory would you like to create? ' dir
 		mkdir $dir
 		if [[ -d $(bash -c "echo $dir") ]]; then
-			echo "Directory Created"
+			echo -e $green"Directory Created"$white
 			sleep 4
 			clear
 		else
-			echo "Failed to create directory"
+			echo -e $red"Failed to create directory"$white
 			sleep 4
 			clear
 		fi
@@ -90,11 +90,11 @@ case $lower in
 		read -p $'What directory would you like to delete? ' dir
 		if [[ -d $(bash -c "echo $dir") ]]; then
 			rmdir $dir
-			echo "Directory Deleted"
+			echo -e $green"Directory Deleted"$white
 			sleep 4
 			clear
 		else
-			echo "Failed to remove directory"
+			echo -e $red"Failed to remove directory"$white
 			sleep 4
 			clear
 		fi
@@ -109,23 +109,23 @@ case $lower in
 		read -p $'What file are we symlinking today? ' file
 		if [[ -f $(bash -c "echo $file") ]]; then
 			exist=1
-			echo "File exists"
+			echo -e $green"File exists"$white
 		elif [[ -d $(bash -c "echo $file") ]]; then
 			exist=1
-			echo "Directory exists"
+			echo -e $green"Directory exists"$white
 		else
-			echo "File does not exist"
+			echo -e $red"File does not exist"$white
 		fi
 		done
 		read -p $'Where would you like the symlink to be? ' link
 		ln -s $file $link
 		if [[ -e $(bash -c "echo $link") ]]; then
-			echo "Creation Successful"
+			echo $green"Creation Successful"$white
 			ls $link
 			sleep 4
 			clear
 		else
-			echo "Creation failed"
+			echo -e $red"Creation failed"$white
 		fi
 		;;
 	#Change Ownership
@@ -140,10 +140,10 @@ case $lower in
 			read -p $'Who should own this file? ' user
 			if grep -q $user /etc/passwd
 			then
-				echo "User exists"
+				echo -e $green"User exists"$white
 				exists1=1
 			else
-				echo "No user by that name"
+				echo -e $red"No user by that name"$white
 			fi
 		done
 		while [ $exists2 -eq 0 ]
@@ -151,20 +151,20 @@ case $lower in
 			read -p $'What should be the default group? ' group
 			if grep -q $group /etc/group
 			then
-				echo "Group exists"
+				echo -e $green"Group exists"$white
 				exists2=1
 			else
-				echo "No group by that name"
+				echo -e $green"No group by that name"$white
 			fi
 		done
 		while [ $exists3 -eq 0 ]
 		do
 			read -p $'What file are we changing the ownership of? ' file
 		if [[ -f $(bash -c "echo $file") ]]; then
-			echo "File exists"
+			echo -e $green"File exists"$white
 			exists3=1
 		else
-			echo "No file found"
+			echo -e $red"No file found"$white
 		fi
 		done
 		chown $user:$group $file
@@ -182,10 +182,10 @@ case $lower in
 		do
 			read -p $'What file do you want to change? ' file
 			if [[ -f $(bash -c "echo $file") ]]; then
-				echo "File exists"
+				echo -e $green"File exists"$white
 				exists=1
 			else
-				echo "No file found"
+				echo -e $red"No file found"$white
 			fi
 		done
 		chmod $perm $file
@@ -201,24 +201,24 @@ case $lower in
 		while [ $exists1 -eq 0 ]
 		do
 			menu=( 'vi' 'vim' 'nano' )
-			echo "----"
+			echo -e "$gray----"
 			for element in "${menu[@]}"
 			do
-				echo ": $element"
+				echo -e "$gray:$yellow $element"
 			done
-			echo "----"
-			read -p $'What text editor would you like to use? ' editor
+			echo -e "$gray----"
+			read -p $'\e[0mWhat text editor would you like to use? ' editor
 			lower2=${editor,,}
 			case $lower2 in
 				vi|vim|nano)
-					echo "Editor Exists"
+					echo -e $green"Editor Exists"$white
 					exists1=1
 					;;
 				*)
-					echo "No editor found, please use the list"
+					echo -e $red"No editor found, please use the list"$white
 			esac
 		done
-		read -p $'What file would you like to edit? ' file
+		read -p $'\e[0mWhat file would you like to edit? ' file
 		$editor $file
 		;;
 	9)
@@ -228,7 +228,7 @@ case $lower in
 		shutdown
 		;;
 	*)
-		echo "Invalid Input"
+		echo -e $red"Invalid Input"$white
 		;;
 esac
 done
