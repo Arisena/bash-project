@@ -34,7 +34,7 @@
 - [ ] Colors
 
 ## locate.sh [ ] 
-- [ ] 1.Find te t within a file
+- [ ] 1.Find text within a file
 - [ ] 2.Show information about a user account
 - [ ] 3.List the contents of a directory
 - [ ] 4.Bring up the man pages for a command
