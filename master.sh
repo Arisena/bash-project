@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export CALLED_FROM_START_APP=yes
+
 black='\e[30m'
 red='\e[31m'
 green='\e[32m'
