@@ -1,13 +1,13 @@
 # Bash Project for Linux Server
 
 ## master.sh
-1.File operations
+√1.File operations
 2.User Operations
 3.Locating information
 4.Fun Stuff
 5.Process menu
-6.Exit
-7.Shut down
+√6.Exit
+√7.Shut down
 
 ## file.sh
 1.Create a file
@@ -18,8 +18,8 @@
 6.Change ownership of a file
 7.Change permissions on a file
 8.Modify text within a file
-9.Return to main menu
-10.Shut down
+√9.Return to main menu
+√10.Shut down
 
 ## user.sh
 1.Create a user
