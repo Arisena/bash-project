@@ -25,7 +25,7 @@ do
 done
 echo -e "$gray----------"
 
-read -p "Choice: " choice
+read -p $'\e[0mChoice: ' choice
 lower=${choice,,}
 
 case $lower in
