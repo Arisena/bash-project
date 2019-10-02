@@ -23,8 +23,6 @@ case $lower in
 	1)
 		back=0
 		echo "Please use full path for a different directory"
-		while [ $back -eq 0 ]
-		do
 		read -p $'What file do you want to create? ' file
 		touch $file
 		if [[ -f $(bash -c "echo $file") ]]; then
@@ -34,12 +32,26 @@ case $lower in
 			clear
 			back=1
 		else
-			echo "Failed"
+			echo "Failed to create file"
+			sleep 4
+			clear
 		fi
-		done
 		;;
 	#File Deletion
 	2)
+		echo "Please use full path"
+		echo "Directories not supported"
+		read -p $'What file do you want to delete? ' file
+		if [[ -f $(bash -c "echo $file") ]]; then
+			rm $file
+			echo "File Deleted"
+			sleep 4
+			clear
+		else
+			echo "Failed"
+			sleep 4
+			clear
+		fi
 		;;
 	3)
 		;;
