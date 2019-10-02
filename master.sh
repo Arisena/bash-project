@@ -23,8 +23,10 @@ case $lower in
 		./file.sh
 		;;
 	2)
+		./user.sh
 		;;
 	3)
+		./locate.sh
 		;;
 	4)
 		;;
