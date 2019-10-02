@@ -222,7 +222,7 @@ case $lower in
 		$editor $file
 		;;
 	9)
-		exit
+		exit 0
 		;;
 	10)
 		shutdown
