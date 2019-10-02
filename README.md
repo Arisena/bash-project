@@ -1,26 +1,26 @@
 # **Bash Project for Linu  Server**
 
-## master.sh [ ] 
-- [ ] 1.File operations
-- [ ] 2.User Operations
-- [ ] 3.Locating information
-- [ ] 4.Fun Stuff
-- [ ] 5.Process menu
-- [ ] 6.E it
-- [ ] 7.Shut down
-- [ ] Colors
+## master.sh [x] 
+- [x] 1.File operations
+- [x] 2.User Operations
+- [x] 3.Locating information
+- [x] 4.Fun Stuff
+- [x] 5.Process menu
+- [x] 6.Edit file
+- [x] 7.Shut down
+- [x] Colors
 
 ## file.sh [ ] 
-- [ ] 1.Create a file
-- [ ] 2.Delete a file
-- [ ] 3.Create a directory
-- [ ] 4.Delete a directory
-- [ ] 5.Create a symbolic link
-- [ ] 6.Change ownership of a file
-- [ ] 7.Change permissions on a file
-- [ ] 8.Modify te t within a file
+- [x] 1.Create a file
+- [x] 2.Delete a file
+- [x] 3.Create a directory
+- [x] 4.Delete a directory
+- [x] 5.Create a symbolic link
+- [x] 6.Change ownership of a file
+- [x] 7.Change permissions on a file
+- [x] 8.Modify te t within a file
 - [ ] 9.Return to main menu
-- [ ] 10.Shut down
+- [x] 10.Shut down
 - [ ] Colors
 
 ## user.sh [ ] 
