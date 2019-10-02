@@ -52,7 +52,8 @@
 - [ ] Colors
 
 ## fun.sh [ ] 
-Anything Fun
+- [ ] fortune
+- [ ] sl
 
 ## extra stuff to impliment
 - [x] Must be started from master.sh
