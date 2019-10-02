@@ -2,10 +2,10 @@
 
 ###### master.sh [ ]
 - [x]1.File operations
-- [ ]2.User Operations
-- [ ]3.Locating information
-- [ ]4.Fun Stuff
-- [ ]5.Process menu
+- [x]2.User Operations
+- [x]3.Locating information
+- [x]4.Fun Stuff
+- [x]5.Process menu
 - [x]6.Exit
 - [x]7.Shut down
 
