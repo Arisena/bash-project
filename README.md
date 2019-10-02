@@ -1,6 +1,6 @@
 # **Bash Project for Linux Server**
 
-###### master.sh [ ]
+###### master.sh [x]
 - [x]1.File operations
 - [x]2.User Operations
 - [x]3.Locating information
@@ -9,7 +9,7 @@
 - [x]6.Exit
 - [x]7.Shut down
 
-###### file.sh [ ]
+###### file.sh [x]
 - [x]1.Create a file
 - [x]2.Delete a file
 - [x]3.Create a directory
