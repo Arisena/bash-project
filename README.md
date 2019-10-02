@@ -1,6 +1,6 @@
 # **Bash Project for Linux Server**
 
-###### master.sh []
+###### master.sh [ ]
 - [x]1.File operations
 - [ ]2.User Operations
 - [ ]3.Locating information
@@ -9,7 +9,7 @@
 - [x]6.Exit
 - [x]7.Shut down
 
-###### file.sh []
+###### file.sh [ ]
 - [x]1.Create a file
 - [x]2.Delete a file
 - [ ]3.Create a directory
@@ -21,7 +21,7 @@
 - [x]9.Return to main menu
 - [x]10.Shut down
 
-###### user.sh []
+###### user.sh [ ]
 - [ ]1.Create a user
 - [ ]2.Change the group for a user
 - [ ]3.Create a group
@@ -30,7 +30,7 @@
 - [ ]6.Return to Main Menu
 - [ ]7.Shut down
 
-###### locate.sh []
+###### locate.sh [ ]
 - [ ]1.Find text within a file
 - [ ]2.Show information about a user account
 - [ ]3.List the contents of a directory
@@ -38,7 +38,7 @@
 - [ ]5.Return to Main Menu
 - [ ]6.Shut down
 
-###### process.sh []
+###### process.sh [ ]
 - [ ]1.Show all processes
 - [ ]2.Kill a process
 - [ ]3.Bring up top
@@ -46,5 +46,5 @@
 - [ ]5.Return to Main Menu
 - [ ]6.Shut down
 
-###### fun.sh []
+###### fun.sh [ ]
 Anything Fun
