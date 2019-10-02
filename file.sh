@@ -1,9 +1,9 @@
 #!/bin/bash
 
+clear
+
 while [ -z "$go" ]
 do
-
-clear
 
 menu=( '1. Create File' '2. Delete File' '3. Create Directory' '4. Delete Directory' '5. Create SymLink' '6. Change Ownership of file' '7. Change Permissions of file' '8. Modify Text' '9. Return to main menu' '10. Shutdown' )
 
@@ -29,6 +29,9 @@ case $lower in
 		touch $file
 		if [[ -f $(bash -c "echo $file") ]]; then
 			echo "File Created"
+			ls $file
+			sleep 4
+			clear
 			back=1
 		else
 			echo "Failed"
@@ -51,7 +54,7 @@ case $lower in
 	8)
 		;;
 	9)
-		./master.sh
+		exit
 		;;
 	10)
 		shutdown
