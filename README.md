@@ -10,7 +10,7 @@
 - [x] 7.Shut down
 - [x] Colors
 
-## file.sh [ ] 
+## file.sh [x] 
 - [x] 1.Create a file
 - [x] 2.Delete a file
 - [x] 3.Create a directory
@@ -21,7 +21,7 @@
 - [x] 8.Modify te t within a file
 - [x] 9.Return to main menu
 - [x] 10.Shut down
-- [ ] Colors
+- [x] Colors
 
 ## user.sh [ ] 
 - [x] 1.Create a user
