@@ -12,12 +12,12 @@
 ###### file.sh [ ]
 - [x]1.Create a file
 - [x]2.Delete a file
-- [ ]3.Create a directory
-- [ ]4.Delete a directory
-- [ ]5.Create a symbolic link
-- [ ]6.Change ownership of a file
-- [ ]7.Change permissions on a file
-- [ ]8.Modify text within a file
+- [x]3.Create a directory
+- [x]4.Delete a directory
+- [x]5.Create a symbolic link
+- [x]6.Change ownership of a file
+- [x]7.Change permissions on a file
+- [x]8.Modify text within a file
 - [x]9.Return to main menu
 - [x]10.Shut down
 
