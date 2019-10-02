@@ -19,16 +19,16 @@ do
 
 menu=( '1. Create File' '2. Delete File' '3. Create Directory' '4. Delete Directory' '5. Create SymLink' '6. Change Ownership of file' '7. Change Permissions of file' '8. Modify Text' '9. Return to Main Menu' '10. Shutdown' )
 
-echo "Numbers Only"
+echo -e "$gray Numbers Only"
 
-echo "-FileOperations-"
+echo -e "$gray-FileOperations-"
 for element in "${menu[@]}"
 do
-	echo ": $element"
+	echo -e "$gray:$yellow $element"
 done
-echo "----------------"
+echo -e "$gray----------------"
 
-read -p "Choice: " choice
+read -p $'\e[0mChoice: ' choice
 lower=${choice,,}
 
 case $lower in
