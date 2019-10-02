@@ -214,5 +214,8 @@ case $lower in
 	10)
 		shutdown
 		;;
+	*)
+		echo "Invalid Input"
+		;;
 esac
 done
