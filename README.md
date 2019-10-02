@@ -24,7 +24,7 @@
 - [ ] Colors
 
 ## user.sh [ ] 
-- [ ] 1.Create a user
+- [x] 1.Create a user
 - [ ] 2.Change the group for a user
 - [ ] 3.Create a group
 - [ ] 4.Delete a user
