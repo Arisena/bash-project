@@ -1,5 +1,15 @@
 #!/bin/bash
 
+black='\e[30m'
+red='\e[31m'
+green='\e[32m'
+yellow='\e[33m'
+blue='\e[34m'
+magenta='\e[35m'
+cyan='\e[36m'
+gray='\e[37m'
+white='\e[0m'
+
 while [ -z "$go" ]
 do
 
@@ -8,12 +18,12 @@ clear
 menu=( '1. File Operations' '2. User Operations' '3. Locating Information' '4. Fun Stuff' '5. Process Menu' '6. Exit' '7. Shut down' )
 
 echo "Numbers Only"
-echo "-MainMenu-"
+echo -e "$gray-MainMenu-"
 for element in "${menu[@]}"
 do
-	echo ": $element"
+	echo -e "$gray:$yellow $element $white"
 done
-echo "----------"
+echo -e "$gray----------"
 
 read -p "Choice: " choice
 lower=${choice,,}
