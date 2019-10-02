@@ -47,7 +47,7 @@ case $lower in
 		./process.sh
 		;;
 	6)
-		exit
+		exit 0
 		;;
 	7)
 		shutdown
