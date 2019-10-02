@@ -10,8 +10,8 @@
 √7.Shut down
 
 ## file.sh
-1.Create a file
-2.Delete a file
+√1.Create a file
+√2.Delete a file
 3.Create a directory
 4.Delete a directory
 5.Create a symbolic link
