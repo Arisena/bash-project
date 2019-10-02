@@ -56,6 +56,7 @@ case $lower in
 	3)
 		echo "Create Directory"
 		echo "Please use full path"
+		read -p $'What directory would you like to create? ' file
 		;;
 	4)
 		;;
