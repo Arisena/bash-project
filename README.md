@@ -10,7 +10,7 @@
 - [x]7.Shut down
 - [x]Colors
 
-## file.sh [x]
+## file.sh [ ]
 - [x]1.Create a file
 - [x]2.Delete a file
 - [x]3.Create a directory
@@ -19,7 +19,7 @@
 - [x]6.Change ownership of a file
 - [x]7.Change permissions on a file
 - [x]8.Modify text within a file
-- [x]9.Return to main menu
+- [ ]9.Return to main menu
 - [x]10.Shut down
 - [ ]Colors
 
@@ -30,7 +30,7 @@
 - [ ]4.Delete a user
 - [ ]5.Change a password
 - [ ]6.Return to Main Menu
-- [ ]7.Shut down
+- [x]7.Shut down
 - [ ]Colors
 
 ## locate.sh [ ]
