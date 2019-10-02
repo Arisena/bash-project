@@ -42,6 +42,7 @@ case $lower in
 		do
 			read -p $'What would you like the group to be? ' group
 			if grep -q $group /etc/group
+			then
 				echo "Group Exists"
 				exist=1
 			else
