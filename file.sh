@@ -48,24 +48,40 @@ case $lower in
 			sleep 4
 			clear
 		else
-			echo "Failed"
+			echo "Failed to delete file"
 			sleep 4
 			clear
 		fi
 		;;
+	#Directory Creation
 	3)
 		echo "Create Directory"
 		echo "Please use full path"
-		read -p $'What directory would you like to create? ' file
+		read -p $'What directory would you like to create? ' dir
+		mkdir $dir
+		if [[ -f $(bash -c "echo $file") ]]; then
+			echo "Directory Created"
+			sleep 4
+			clear
+		else
+			echo "Failed to create directory"
+			sleep 4
+			clear
+		fi
 		;;
+	#Delete Directory
 	4)
 		;;
+	#Create Symlink
 	5)
 		;;
+	#Change Ownership
 	6)
 		;;
+	#Change Permissions
 	7)
 		;;
+	#Modify Test
 	8)
 		;;
 	9)
