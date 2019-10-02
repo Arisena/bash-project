@@ -61,7 +61,6 @@ case $lower in
 		mkdir $dir
 		if [[ -d $(bash -c "echo $dir") ]]; then
 			echo "Directory Created"
-			pwd $dir
 			sleep 4
 			clear
 		else
@@ -118,12 +117,96 @@ case $lower in
 		;;
 	#Change Ownership
 	6)
+		exists1=0
+		exists2=0
+		exists3=0
+		echo "Ownership Change"
+		echo "Please use full path to file"
+		while [ $exists1 -eq 0 ]
+		do
+			read -p $'Who should own this file? ' user
+			if grep -q $user /etc/passwd
+			then
+				echo "User exists"
+				exists1=1
+			else
+				echo "No user by that name"
+			fi
+		done
+		while [ $exists2 -eq 0 ]
+		do
+			read -p $'What should be the default group? ' group
+			if grep -q $group /etc/group
+			then
+				echo "Group exists"
+				exists2=1
+			else
+				echo "No group by that name"
+			fi
+		done
+		while [ $exists3 -eq 0 ]
+		do
+			read -p $'What file are we changing the ownership of? ' file
+		if [[ -f $(bash -c "echo $file") ]]; then
+			echo "File exists"
+			exists3=1
+		else
+			echo "No file found"
+		fi
+		done
+		chown $user:$group $file
+		ls -l $file
+		sleep 4
+		clear
 		;;
 	#Change Permissions
 	7)
+		exists=0
+		echo "File permissions changes"
+		echo "Please use full path"
+		read -p $'What do you want the file permissions to be? ' perm
+		while [ $exists -eq 0 ]
+		do
+			read -p $'What file do you want to change? ' file
+			if [[ -f $(bash -c "echo $file") ]]; then
+				echo "File exists"
+				exists=1
+			else
+				echo "No file found"
+			fi
+		done
+		chmod $perm $file
+		ls -l $file
+		sleep 4
+		clear
 		;;
-	#Modify Test
+	#Modify file
 	8)
+		exists1=0
+		echo "File editing"
+		echo "Please use full path"
+		while [ $exists1 -eq 0 ]
+		do
+			menu=( 'vi' 'vim' 'nano' )
+			echo "----"
+			for element in "${menu[@]}"
+			do
+				echo ": $element"
+			done
+			echo "----"
+			read -p $'What text editor would you like to use? ' editor
+			lower2=${editor,,}
+			case $lower2 in
+				vi|vim|nano)
+					echo "Editor Exists"
+					exists1=1
+					;;
+				*)
+					echo "No editor found, please use the list"
+			esac
+		done
+		read -p $'What file would you like to edit? ' file
+		$editor $file
 		;;
 	9)
 		exit
