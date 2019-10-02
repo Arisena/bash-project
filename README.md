@@ -19,7 +19,7 @@
 - [x] 6.Change ownership of a file
 - [x] 7.Change permissions on a file
 - [x] 8.Modify te t within a file
-- [ ] 9.Return to main menu
+- [x] 9.Return to main menu
 - [x] 10.Shut down
 - [ ] Colors
 
@@ -53,3 +53,6 @@
 
 ## fun.sh [ ] 
 Anything Fun
+
+###### extra stuff to impliment
+- [x] Must be started from master.sh
