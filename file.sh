@@ -146,7 +146,7 @@ case $lower in
 		do
 			printf "Who should own this file? "
 			read user
-			if grep -q $user /etc/passwd
+			if grep -qw $user /etc/passwd
 			then
 				echo -e $green"User exists"$white
 				exists1=1
@@ -158,7 +158,7 @@ case $lower in
 		do
 			printf "What should be the default group"
 			read group
-			if grep -q $group /etc/group
+			if grep -qw $group /etc/group
 			then
 				echo -e $green"Group exists"$white
 				exists2=1
