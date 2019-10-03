@@ -45,7 +45,7 @@ case $lower in
 		do
 			printf "What would you like the group to be"
 			read group
-			if grep -q $group /etc/group
+			if grep -qw $group /etc/group
 			then
 				echo "Group exists"
 				exist=1
@@ -65,7 +65,7 @@ case $lower in
 		do
 			printf "What user would you like to edit"
 			read user
-			if grep -q $user /etc/passwd
+			if grep -qw $user /etc/passwd
 			then
 				echo "User exists"
 				exist1=1
@@ -90,12 +90,50 @@ case $lower in
 		;;
 	#Create Group
 	3)
+		echo "Group Creation"
+		printf "What group would you like to create? "
+		read group
+		groupadd $group
+		if grep -qw $group /etc/group
+		then
+			echo "Creation Successful"
+		else
+			echo "Creation Failed"
+		fi
+		sleep 4
+		clear
 		;;
 	#Delete User
 	4)
+		exists=0
+		echo "User Deletion"
+		while [ $exists -eq 0 ]
+		do
+			printf "What user would you like to delete? "
+			read user
+			if grep -qw $user /etc/passwd
+			then
+				echo "User found, attempting delete"
+				userdel $user
+				exists=1
+			else
+				echo "User no found"
+			fi
+		done
+		if grep -qw $user /etc/passwd
+		then
+			echo "Deletion Failed"
+		else
+			echo "Deletion Successful"
+		fi
+		sleep 4
+		clear
 		;;
 	#Change Password
 	5)
+		exists=0
+		echo "Password Change"
+		echo "Note, you must be an admin to change other people password"
 		;;
 	6)
 		exit 0
