@@ -43,7 +43,7 @@ case $lower in
 			read -p $'What would you like the group to be? ' group
 			if grep -q $group /etc/group
 			then
-				echo "Group Exists"
+				echo "Group exists"
 				exist=1
 			else
 				echo "Group not found"
@@ -54,6 +54,33 @@ case $lower in
 		;;
 	#Change User Group
 	2)
+		exist1=0
+		exist2=0
+		echo "User Group Change Mode"
+		while [ $exist1 -eq 0 ]
+		do
+			read -p $'What user would you like to edit? ' user
+			if grep -q $user /etc/passwd
+			then
+				echo "User exists"
+				exist1=1
+			else
+				echo "User not found"
+			fi
+		done
+		while [ $exist2 -eq 0 ]
+		do
+			read -p $'What group would you like to change them too? ' group
+			if greo -q $group /etc/group
+			then
+				echo "Groups exists"
+				exist2=1
+			else
+				echo "Group not found"
+			fi
+		done
+		usermod -a -G $group $user
+		echo "Group added to user"
 		;;
 	#Create Group
 	3)
