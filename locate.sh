@@ -31,6 +31,24 @@ read choice
 lower=${choice,,}
 
 case $lower in
+	#Text Location
+	1)
+		;;
+	#User Account Info
+	2)
+		;;
+	#Contents of a Directory
+	3)
+		;;
+	#Man Pages
+	4)
+		;;
+	5)
+		exit
+		;;
+	6)
+		shutdown
+		;;
 	*)
 		echo -e $red"Invalid Input"$white
 		;;
