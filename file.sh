@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 [ -z $CALLED_FROM_START_APP ] && { echo "Not called from master.sh"; exit 42; }
 
 black='\e[30m'
