@@ -26,11 +26,11 @@
 ## user.sh [ ] 
 - [x] 1.Create a user
 - [x] 2.Change the group for a user
-- [ ] 3.Create a group
-- [ ] 4.Delete a user
-- [ ] 5.Change a password
-- [ ] 6.Return to Main Menu
-- [ ] 7.Shut down
+- [x] 3.Create a group
+- [x] 4.Delete a user
+- [x] 5.Change a password
+- [x] 6.Return to Main Menu
+- [x] 7.Shut down
 - [ ] Colors
 
 ## locate.sh [ ] 
