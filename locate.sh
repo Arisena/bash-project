@@ -17,7 +17,7 @@ clear
 while [ -z "$go" ]
 do
 
-menu=( '1. Find Text within a File' '2. Info on User Accounts' '3. List Contents of a Directory' '4. Man Page of a Command' '6. Return to Main Menu' '7. Shutdown'  )
+menu=( '1. Find Text within a File' '2. Info on User Accounts' '3. List Contents of a Directory' '4. Man Page of a Command' '5. Return to Main Menu' '6. Shutdown'  )
 
 echo -e $gray"Numbers Only"
 
@@ -33,8 +33,31 @@ read choice
 lower=${choice,,}
 
 case $lower in
-	#Text Location
+	#Locate Text in a File
 	1)
+		exist=0
+		echo -e "Finding Text withing a file"
+		echo -e "Please use full path to file"
+		printf "What text would you like to find? "
+		read text
+		while [ $exist -eq 0 ]
+		do
+			printf "What file would you like to search? "
+			read file
+			if [[ -f $(bash -c "echo $file") ]]; then
+				echo -e "File Found"
+				exist=1
+			else
+				echo -e "Failed to find file"
+			fi
+		done
+		echo -e "Opening search results"
+		sleep 1
+		grep --color=auto -rn $text $file | less
+		echo -e $green"Output will be into search.txt for later use$white"
+		grep --color=auto -rn $text $file > search.txt
+		sleep 3
+		clear
 		;;
 	#User Account Info
 	2)
