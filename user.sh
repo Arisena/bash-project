@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ -z $CALLED_FROM_START_APP ] && { echo "Not called from master.sh"; exit 42; }
+[ -z $CALLED_FROM_START_APP ] && { echo -e "Not called from master.sh"; exit 42; }
 
 black='\e[30m'
 red='\e[31m'
@@ -19,14 +19,14 @@ do
 
 menu=( '1. Create User' '2. Change User Group' '3. Create Group' '4. Delete User' '5. Change Password' '6. Return to Main Menu' '7. Shutdown'  )
 
-echo "Numbers Only"
+echo -e $gray"Numbers Only"
 
-echo "--UserOperations--"
+echo -e "$gray--UserOperations--"
 for element in "${menu[@]}"
 do
-	echo ": $element"
+	echo -e "$gray:$yellow $element"
 done
-echo "------------------"
+echo -e "$gray------------------$white"
 
 printf "Choice: "
 read choice
@@ -36,7 +36,7 @@ case $lower in
 	#Create User
 	1)
 		exist=0
-		echo "User Creation Mode"
+		echo -e "User Creation Mode"
 		printf "What would you like the username to be"
 		read user
 		printf "What would you like the comment to be"
@@ -47,10 +47,10 @@ case $lower in
 			read group
 			if grep -qw $group /etc/group
 			then
-				echo "Group exists"
+				echo -e "Group exists"
 				exist=1
 			else
-				echo "Group not found"
+				echo -e "Group not found"
 			fi
 		done
 		useradd -c $com -g $group $user
@@ -60,17 +60,17 @@ case $lower in
 	2)
 		exist1=0
 		exist2=0
-		echo "User Group Change Mode"
+		echo -e "User Group Change Mode"
 		while [ $exist1 -eq 0 ]
 		do
 			printf "What user would you like to edit"
 			read user
 			if grep -qw $user /etc/passwd
 			then
-				echo "User exists"
+				echo -e "User exists"
 				exist1=1
 			else
-				echo "User not found"
+				echo -e "User not found"
 			fi
 		done
 		while [ $exist2 -eq 0 ]
@@ -79,26 +79,26 @@ case $lower in
 			read group
 			if greo -q $group /etc/group
 			then
-				echo "Groups exists"
+				echo -e "Groups exists"
 				exist2=1
 			else
-				echo "Group not found"
+				echo -e "Group not found"
 			fi
 		done
 		usermod -a -G $group $user
-		echo "Group added to user"
+		echo -e "Group added to user"
 		;;
 	#Create Group
 	3)
-		echo "Group Creation"
+		echo -e "Group Creation"
 		printf "What group would you like to create? "
 		read group
 		groupadd $group
 		if grep -qw $group /etc/group
 		then
-			echo "Creation Successful"
+			echo -e "Creation Successful"
 		else
-			echo "Creation Failed"
+			echo -e "Creation Failed"
 		fi
 		sleep 4
 		clear
@@ -106,25 +106,25 @@ case $lower in
 	#Delete User
 	4)
 		exists=0
-		echo "User Deletion"
+		echo -e "User Deletion"
 		while [ $exists -eq 0 ]
 		do
 			printf "What user would you like to delete? "
 			read user
 			if grep -qw $user /etc/passwd
 			then
-				echo "User found, attempting delete"
+				echo -e "User found, attempting delete"
 				userdel $user
 				exists=1
 			else
-				echo "User no found"
+				echo -e "User no found"
 			fi
 		done
 		if grep -qw $user /etc/passwd
 		then
-			echo "Deletion Failed"
+			echo -e "Deletion Failed"
 		else
-			echo "Deletion Successful"
+			echo -e "Deletion Successful"
 		fi
 		sleep 4
 		clear
@@ -132,8 +132,22 @@ case $lower in
 	#Change Password
 	5)
 		exists=0
-		echo "Password Change"
-		echo "Note, you must be an admin to change other people password"
+		echo -e "Password Change"
+		echo -e "Note, you must be an admin to change other people password"
+		while [ $exists -eq 0 ]
+		do
+			printf "What user are we changing the passwd for? "
+			read user
+			if grep -qw $user /etc/passwd
+			then
+				echo -e "User Found"
+				exists=1
+			else
+				echo -e "User not found"
+			fi
+		done
+		echo -e "Staring Command"
+		passwd $user &> /dev/tty
 		;;
 	6)
 		exit 0
@@ -142,7 +156,7 @@ case $lower in
 		shutdown
 		;;
 	*)
-		echo "Invalid Input"
+		echo -e "Invalid Input"
 		sleep 4
 		clear
 		;;
