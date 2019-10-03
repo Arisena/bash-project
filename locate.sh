@@ -12,3 +12,28 @@ cyan='\e[36m'
 gray='\e[37m'
 white='\e[0m'
 
+clear
+
+while [ -z "$go" ]
+do
+
+menu=( '1. Find Text within a File' '2. Info on User Accounts' 'List Contents of a Directory' 'Man Page of a Command' 'Return to Main Menu' 'Shutdown'  )
+
+echo -e "$gray-LocatingInfo-"
+for element in "${menu[@]}"
+do
+	echo -e "$gray:$yellow $element"
+done
+echo -e "$gray--------------$white"
+
+printf "Choice: "
+read choice
+lower=${choice,,}
+
+case $lower in
+	*)
+		echo -e $red"Invalid Input"$white
+		;;
+esac
+
+done
