@@ -37,13 +37,13 @@ case $lower in
 	1)
 		exist=0
 		echo -e "User Creation Mode"
-		printf "What would you like the username to be"
+		printf "What would you like the username to be? "
 		read user
-		printf "What would you like the comment to be"
+		printf "What would you like the comment to be? "
 		read com
 		while [ $exist -eq 0 ]
 		do
-			printf "What would you like the group to be"
+			printf "What would you like the group to be? "
 			read group
 			if grep -qw $group /etc/group
 			then
