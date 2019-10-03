@@ -47,8 +47,6 @@ case $lower in
 			clear
 		else
 			echo -e $red"Failed to create file"$white
-			echo "Do you have the right Permissions?"
-			echo "Does the location exist"
 			sleep 4
 			clear
 		fi
@@ -58,7 +56,7 @@ case $lower in
 		echo "File Deletion"
 		echo "Please use full path"
 		echo "Directories not supported"
-		printf "What directory do you want to delete? "
+		printf "What file do you want to delete? "
 		read file
 		if [[ -f $(bash -c "echo $file") ]]; then
 			rm $file
@@ -170,7 +168,7 @@ case $lower in
 		done
 		while [ $exists3 -eq 0 ]
 		do
-			printf "What file are we changing the ownership of? " 
+			printf "What file are we changing the ownership of? "
 			read file
 		if [[ -f $(bash -c "echo $file") ]]; then
 			echo -e $green"File exists"$white
