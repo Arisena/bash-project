@@ -53,8 +53,12 @@ case $lower in
 				echo -e "Group not found"
 			fi
 		done
-		useradd -c $com -g $group $user
-		grep $user /etc/passwd
+		useradd -c "$com" -g $group $user
+		if grep $user /etc/passwd
+			echo "Creation Successful"
+		else
+			echo "Creation Failed"
+		fi
 		;;
 	#Change User Group
 	2)
@@ -86,7 +90,9 @@ case $lower in
 			fi
 		done
 		usermod -a -G $group $user
-		echo -e "Group added to user"
+		echo -e "Attempting to add group added to user"
+		grep $group /etc/group
+		echo -e "If user was not added access was denied"
 		;;
 	#Create Group
 	3)
