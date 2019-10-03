@@ -17,7 +17,9 @@ clear
 while [ -z "$go" ]
 do
 
-menu=( '1. Find Text within a File' '2. Info on User Accounts' 'List Contents of a Directory' 'Man Page of a Command' 'Return to Main Menu' 'Shutdown'  )
+menu=( '1. Find Text within a File' '2. Info on User Accounts' '3. List Contents of a Directory' '4. Man Page of a Command' '6. Return to Main Menu' '7. Shutdown'  )
+
+echo -e $gray"Numbers Only"
 
 echo -e "$gray-LocatingInfo-"
 for element in "${menu[@]}"
