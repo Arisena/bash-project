@@ -39,7 +39,7 @@ case $lower in
 		echo "Please use full path"
 		printf "What file do you want to create? "
 		read file
-		touch $file
+		touch -c $file
 		if [[ -f $(bash -c "echo $file") ]]; then
 			echo -e $green"File Created"$white
 			ls $file
@@ -47,6 +47,8 @@ case $lower in
 			clear
 		else
 			echo -e $red"Failed to create file"$white
+			echo "Do you have the right Permissions?"
+			echo "Does the location exist"
 			sleep 4
 			clear
 		fi
