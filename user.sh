@@ -55,6 +55,7 @@ case $lower in
 		done
 		useradd -c "$com" -g $group $user
 		if grep $user /etc/passwd
+		then
 			echo "Creation Successful"
 		else
 			echo "Creation Failed"
