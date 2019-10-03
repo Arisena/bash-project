@@ -25,7 +25,7 @@
 
 ## user.sh [ ] 
 - [x] 1.Create a user
-- [ ] 2.Change the group for a user
+- [x] 2.Change the group for a user
 - [ ] 3.Create a group
 - [ ] 4.Delete a user
 - [ ] 5.Change a password
