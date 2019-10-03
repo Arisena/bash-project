@@ -32,7 +32,7 @@ lower=${choice,,}
 
 case $lower in
 	1)
-		./file.sh
+		./file.sh 2> /dev/null
 		;;
 	2)
 		./user.sh

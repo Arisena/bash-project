@@ -28,7 +28,8 @@ do
 done
 echo "------------------"
 
-read -p "choice: " choice
+printf "Choice: "
+read choice
 lower=${choice,,}
 
 case $lower in
@@ -36,11 +37,14 @@ case $lower in
 	1)
 		exist=0
 		echo "User Creation Mode"
-		read -p $'What would you like the username to be? ' user
-		read -p $'What would you like the comment to be? ' com
+		printf "What would you like the username to be"
+		read user
+		printf "What would you like the comment to be"
+		read com
 		while [ $exist -eq 0 ]
 		do
-			read -p $'What would you like the group to be? ' group
+			printf "What would you like the group to be"
+			read group
 			if grep -q $group /etc/group
 			then
 				echo "Group exists"
@@ -59,7 +63,8 @@ case $lower in
 		echo "User Group Change Mode"
 		while [ $exist1 -eq 0 ]
 		do
-			read -p $'What user would you like to edit? ' user
+			printf "What user would you like to edit"
+			read user
 			if grep -q $user /etc/passwd
 			then
 				echo "User exists"
@@ -70,7 +75,8 @@ case $lower in
 		done
 		while [ $exist2 -eq 0 ]
 		do
-			read -p $'What group would you like to change them too? ' group
+			printf "What group would you like to put them in"
+			read group
 			if greo -q $group /etc/group
 			then
 				echo "Groups exists"

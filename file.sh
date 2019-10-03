@@ -26,17 +26,19 @@ for element in "${menu[@]}"
 do
 	echo -e "$gray:$yellow $element"
 done
-echo -e "$gray----------------"
+echo -e "$gray----------------$white"
 
-read -p $'\e[0mChoice: ' choice
+printf "Choice: "
+read choice
 lower=${choice,,}
 
 case $lower in
 	#File Creation
 	1)
 		echo "File Creation"
-		echo "Please use full path for a different directory"
-		read -p $'What file do you want to create? ' file
+		echo "Please use full path"
+		printf "What file do you want to create? "
+		read file
 		touch $file
 		if [[ -f $(bash -c "echo $file") ]]; then
 			echo -e $green"File Created"$white
@@ -54,7 +56,8 @@ case $lower in
 		echo "File Deletion"
 		echo "Please use full path"
 		echo "Directories not supported"
-		read -p $'What file do you want to delete? ' file
+		printf "What directory do you want to delete? "
+		read file
 		if [[ -f $(bash -c "echo $file") ]]; then
 			rm $file
 			echo -e $green"File Deleted"$white
@@ -70,7 +73,8 @@ case $lower in
 	3)
 		echo "Create Directory"
 		echo "Please use full path"
-		read -p $'What directory would you like to create? ' dir
+		printf "What directory would you like to create? "
+		read dir
 		mkdir $dir
 		if [[ -d $(bash -c "echo $dir") ]]; then
 			echo -e $green"Directory Created"$white
@@ -87,7 +91,8 @@ case $lower in
 		echo "Directory Removal"
 		echo "Please us full path"
 		echo "Please not directory must be empty"
-		read -p $'What directory would you like to delete? ' dir
+		printf "What directory would you like to delete?"
+		read dir
 		if [[ -d $(bash -c "echo $dir") ]]; then
 			rmdir $dir
 			echo -e $green"Directory Deleted"$white
@@ -106,18 +111,20 @@ case $lower in
 		echo "Full path is needed here"
 		while [ $exist -eq 0 ]
 		do
-		read -p $'What file are we symlinking today? ' file
-		if [[ -f $(bash -c "echo $file") ]]; then
-			exist=1
-			echo -e $green"File exists"$white
-		elif [[ -d $(bash -c "echo $file") ]]; then
-			exist=1
-			echo -e $green"Directory exists"$white
-		else
-			echo -e $red"File does not exist"$white
-		fi
+			printf "What file would you like to symlink? "
+			read file
+			if [[ -f $(bash -c "echo $file") ]]; then
+				exist=1
+				echo -e $green"File exists"$white
+			elif [[ -d $(bash -c "echo $file") ]]; then
+				exist=1
+				echo -e $green"Directory exists"$white
+			else
+				echo -e $red"File does not exist"$white
+			fi
 		done
-		read -p $'Where would you like the symlink to be? ' link
+		printf "Where would you like the symlink to be? "
+		read link
 		ln -s $file $link
 		if [[ -e $(bash -c "echo $link") ]]; then
 			echo $green"Creation Successful"$white
@@ -137,7 +144,8 @@ case $lower in
 		echo "Please use full path to file"
 		while [ $exists1 -eq 0 ]
 		do
-			read -p $'Who should own this file? ' user
+			printf "Who should own this file? "
+			read user
 			if grep -q $user /etc/passwd
 			then
 				echo -e $green"User exists"$white
@@ -148,7 +156,8 @@ case $lower in
 		done
 		while [ $exists2 -eq 0 ]
 		do
-			read -p $'What should be the default group? ' group
+			printf "What should be the default group"
+			read group
 			if grep -q $group /etc/group
 			then
 				echo -e $green"Group exists"$white
@@ -159,7 +168,8 @@ case $lower in
 		done
 		while [ $exists3 -eq 0 ]
 		do
-			read -p $'What file are we changing the ownership of? ' file
+			printf "What file are we changing the ownership of? " 
+			read file
 		if [[ -f $(bash -c "echo $file") ]]; then
 			echo -e $green"File exists"$white
 			exists3=1
@@ -177,10 +187,12 @@ case $lower in
 		exists=0
 		echo "File permissions changes"
 		echo "Please use full path"
-		read -p $'What do you want the file permissions to be? ' perm
+		printf "What do you want the permissions to be? "
+		read perm
 		while [ $exists -eq 0 ]
 		do
-			read -p $'What file do you want to change? ' file
+			printf "What file do you want to change? "
+			read file
 			if [[ -f $(bash -c "echo $file") ]]; then
 				echo -e $green"File exists"$white
 				exists=1
@@ -207,7 +219,8 @@ case $lower in
 				echo -e "$gray:$yellow $element"
 			done
 			echo -e "$gray----"
-			read -p $'\e[0mWhat text editor would you like to use? ' editor
+			printf "What text editor would you like to use? "
+			read editor
 			lower2=${editor,,}
 			case $lower2 in
 				vi|vim|nano)
@@ -218,7 +231,8 @@ case $lower in
 					echo -e $red"No editor found, please use the list"$white
 			esac
 		done
-		read -p $'\e[0mWhat file would you like to edit? ' file
+		printf "What file would you like to edit? "
+		read file
 		$editor $file
 		;;
 	9)
