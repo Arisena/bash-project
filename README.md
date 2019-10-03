@@ -1,4 +1,4 @@
-# **Bash Project for Linu  Server**
+# **Bash Project for Linux Server**
 
 ## master.sh [x] 
 - [x] 1.File operations
