@@ -57,3 +57,4 @@
 
 ## extra stuff to impliment
 - [x] Must be started from master.sh
+- [x] Error Suppression
