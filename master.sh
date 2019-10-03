@@ -35,16 +35,16 @@ case $lower in
 		./file.sh 2> /dev/null
 		;;
 	2)
-		./user.sh
+		./user.sh 2> /dev/null
 		;;
 	3)
-		./locate.sh
+		./locate.sh 2> /dev/null
 		;;
 	4)
-		./fun.sh
+		./fun.sh 2> /dev/null
 		;;
 	5)
-		./process.sh
+		./process.sh 2> /dev/null
 		;;
 	6)
 		exit 0
