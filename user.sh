@@ -47,18 +47,18 @@ case $lower in
 			read group
 			if grep -qw $group /etc/group
 			then
-				echo -e "Group exists"
+				echo -e $green"Group exists"
 				exist=1
 			else
-				echo -e "Group not found"
+				echo -e $red"Group not found"
 			fi
 		done
 		useradd -c "$com" -g $group $user
 		if grep $user /etc/passwd
 		then
-			echo -e "Creation Successful"
+			echo -e $green"Creation Successful"
 		else
-			echo -e "Creation Failed"
+			echo -e $red"Creation Failed"
 		fi
 		;;
 	#Change User Group
@@ -72,10 +72,10 @@ case $lower in
 			read user
 			if grep -qw $user /etc/passwd
 			then
-				echo -e "User exists"
+				echo -e $green"User exists"
 				exist1=1
 			else
-				echo -e "User not found"
+				echo -e $red"User not found"
 			fi
 		done
 		while [ $exist2 -eq 0 ]
@@ -84,10 +84,10 @@ case $lower in
 			read group
 			if greo -q $group /etc/group
 			then
-				echo -e "Groups exists"
+				echo -e $green"Groups exists"
 				exist2=1
 			else
-				echo -e "Group not found"
+				echo -e $red"Group not found"
 			fi
 		done
 		usermod -a -G $group $user
@@ -103,9 +103,9 @@ case $lower in
 		groupadd $group
 		if grep -qw $group /etc/group
 		then
-			echo -e "Creation Successful"
+			echo -e $green"Creation Successful"
 		else
-			echo -e "Creation Failed"
+			echo -e $red"Creation Failed"
 		fi
 		sleep 4
 		clear
@@ -120,18 +120,18 @@ case $lower in
 			read user
 			if grep -qw $user /etc/passwd
 			then
-				echo -e "User found, attempting delete"
+				echo -e $green"User found, attempting delete"
 				userdel $user
 				exists=1
 			else
-				echo -e "User no found"
+				echo -e $red"User no found"
 			fi
 		done
 		if grep -qw $user /etc/passwd
 		then
-			echo -e "Deletion Failed"
+			echo -e $red"Deletion Failed"
 		else
-			echo -e "Deletion Successful"
+			echo -e $green"Deletion Successful"
 		fi
 		sleep 4
 		clear
@@ -147,10 +147,10 @@ case $lower in
 			read user
 			if grep -qw $user /etc/passwd
 			then
-				echo -e "User Found"
+				echo -e $green"User Found"
 				exists=1
 			else
-				echo -e "User not found"
+				echo -e $red"User not found"
 			fi
 		done
 		echo -e "Staring Command"
