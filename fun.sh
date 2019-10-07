@@ -12,3 +12,29 @@ cyan='\e[36m'
 gray='\e[37m'
 white='\e[0m'
 
+menu=( '1. Fortune' '2. sl' 'Return to Main Menu' 'Shutdown' )
+
+echo -e $gray"Numbers Only"
+
+echo -e "$gray-FileOperations-"
+for element in "${menu[@]}"
+do
+	echo -e "$gray:$yellow $element"
+done
+echo -e "$gray----------------$white"
+
+printf "Choice: "
+read choice
+lower=${choice,,}
+
+case $lower in
+	#Fortune
+	1)
+		fortune -ac
+		printf "Type Anything to Continue"
+		read
+		;;
+	2)
+		sl
+		;;
+esac
