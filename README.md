@@ -54,6 +54,7 @@
 ## fun.sh [ ] 
 - [x] fortune
 - [x] sl
+- [x] cmatrix
 - [ ] return to main menu
 - [ ] shutdown
 - [ ] color
