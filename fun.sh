@@ -72,7 +72,7 @@ case $lower in
 		;;
 	#pi
 	6)
-		printf "How many numbers would you like to have displayed"
+		printf "How many numbers would you like to have displayed? "
 		read $number
 		pi $number
 		printf "Output sent to pi_output.txt\n"
