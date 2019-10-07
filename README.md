@@ -55,6 +55,8 @@
 - [x] fortune
 - [x] sl
 - [x] cmatrix
+- [x] ghostbusters
+- [x] figlet
 - [ ] return to main menu
 - [ ] shutdown
 - [ ] color
