@@ -31,7 +31,7 @@
 - [x] 5.Change a password
 - [x] 6.Return to Main Menu
 - [x] 7.Shut down
-- [ ] Colors
+- [x] Colors
 
 ## locate.sh [ ] 
 - [x] 1.Find text within a file
