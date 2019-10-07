@@ -12,7 +12,7 @@ cyan='\e[36m'
 gray='\e[37m'
 white='\e[0m'
 
-menu=( '1. Fortune' '2. sl' 'Return to Main Menu' 'Shutdown' )
+menu=( '1. Fortune' '2. sl' '3. cmatrix' 'Return to Main Menu' 'Shutdown' )
 
 echo -e $gray"Numbers Only"
 
@@ -36,5 +36,8 @@ case $lower in
 		;;
 	2)
 		sl
+		;;
+	3)
+		cmatrix
 		;;
 esac
