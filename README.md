@@ -57,8 +57,9 @@
 - [x] cmatrix
 - [x] ghostbusters
 - [x] figlet
-- [ ] return to main menu
-- [ ] shutdown
+- [x] pi
+- [x] return to main menu
+- [x] shutdown
 - [ ] color
 
 ## extra stuff to impliment
