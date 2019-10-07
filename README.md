@@ -54,6 +54,9 @@
 ## fun.sh [ ] 
 - [x] fortune
 - [x] sl
+- [ ] return to main menu
+- [ ] shutdown
+- [ ] color
 
 ## extra stuff to impliment
 - [x] Must be started from master.sh
