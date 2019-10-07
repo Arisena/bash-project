@@ -56,9 +56,9 @@ case $lower in
 		useradd -c "$com" -g $group $user
 		if grep $user /etc/passwd
 		then
-			echo "Creation Successful"
+			echo -e "Creation Successful"
 		else
-			echo "Creation Failed"
+			echo -e "Creation Failed"
 		fi
 		;;
 	#Change User Group
@@ -163,7 +163,7 @@ case $lower in
 		shutdown
 		;;
 	*)
-		echo -e "Invalid Input"
+		echo -e $red"Invalid Input"
 		sleep 4
 		clear
 		;;
