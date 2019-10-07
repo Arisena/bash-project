@@ -17,7 +17,7 @@ clear
 while [ -z $go ]
 do
 
-menu=( '1. Fortune' '2. sl' '3. cmatrix' '4. Ghostbusters' '5. figlet banner' 'Return to Main Menu' 'Shutdown' )
+menu=( '1. Fortune' '2. sl' '3. cmatrix' '4. Ghostbusters' '5. figlet banner' '6. pi' '7. Return to Main Menu' '8. Shutdown' )
 
 echo -e $gray"Numbers Only"
 
@@ -38,18 +38,26 @@ case $lower in
 		fortune -ac
 		printf "Type Anything to Continue"
 		read
+		clear
 		;;
 	#sl
 	2)
 		sl
+		clear
 		;;
 	#cmatrix
 	3)
 		cmatrix
+		clear
 		;;
 	#cowsay Ghostbusters
 	4)
 		cowsay -f ghostbusters Who you Gonna Call
+		echo
+		echo
+		printf "Type anything to continue"
+		read
+		clear
 		;;
 	#figlet
 	5)
@@ -62,7 +70,22 @@ case $lower in
 		read
 		clear
 		;;
+	#pi
 	6)
+		printf "How many numbers would you like to have displayed"
+		read $number
+		pi $number
+		printf "Output sent to pi_output.txt\n"
+		pi $number > pi_output.txt
+		printf "Type anything to continue"
+		read
+		clear
+		;;
+	7)
+		exit
+		;;
+	8)
+		shutdown
 		;;
 esac
 done
