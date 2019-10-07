@@ -34,10 +34,18 @@ case $lower in
 		printf "Type Anything to Continue"
 		read
 		;;
+	#sl
 	2)
 		sl
 		;;
+	#cmatrix
 	3)
 		cmatrix
+		;;
+	4)
+		;;
+	5)
+		;;
+	6)
 		;;
 esac
