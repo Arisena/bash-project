@@ -74,6 +74,7 @@ case $lower in
 			if [[ -d $(bash -c "echo $dir") ]]; then
 				echo -e $green"Directory Found"$white
 				ls $dir
+				exists=1
 				printf "Press enter to continue"
 				read
 			else
@@ -81,6 +82,7 @@ case $lower in
 				sleep 4
 			fi
 		done
+		clear
 		;;
 	#Man Pages
 	4)
