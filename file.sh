@@ -39,7 +39,7 @@ case $lower in
 		echo "Please use full path"
 		printf "What file do you want to create? "
 		read file
-		touch -c $file
+		touch $file
 		if [[ -f $(bash -c "echo $file") ]]; then
 			echo -e $green"File Created"$white
 			ls $file
