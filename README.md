@@ -23,7 +23,7 @@
 - [x] 10.Shut down
 - [x] Colors
 
-## user.sh [ ] 
+## user.sh [x] 
 - [x] 1.Create a user
 - [x] 2.Change the group for a user
 - [x] 3.Create a group
