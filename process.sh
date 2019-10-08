@@ -35,6 +35,12 @@ lower=${choice,,}
 case $lower in
 	#Process View
 	1)
+		printf "Starting 'ps'"
+		sleep 1
+		ps -e > ps_output.txt
+		ps -e | less
+		printf "Output has also been saved to ps_output.txt\n"
+		printf "Press enter to continue"
 		;;
 	#Kill a Process
 	2)
