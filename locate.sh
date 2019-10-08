@@ -73,7 +73,7 @@ case $lower in
 			read dir
 			if [[ -d $(bash -c "echo $dir") ]]; then
 				echo -e $green"Directory Found"$white
-				ls $dir
+				ls --color --group-directories-first --classify $dir
 				exists=1
 				printf "Press enter to continue"
 				read
