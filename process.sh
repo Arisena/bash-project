@@ -46,7 +46,13 @@ case $lower in
 		;;
 	#Kill a Process
 	2)
-		printf "Process Kill Mode"
+		printf "Process Kill Mode\n"
+		printf "Listing available processes\n"
+		ps -u
+		printf "To kill a process look at the PID and input that\n"
+		printf "What process would you like to kill? "
+		read $pid
+		kill $pid 2> /dev/tty
 		;;
 	#top
 	3)
