@@ -43,7 +43,7 @@
 - [ ] Colors
 
 ## process.sh [ ] 
-- [ ] 1.Show all processes
+- [x] 1.Show all processes
 - [ ] 2.Kill a process
 - [ ] 3.Bring up top
 - [ ] 4.Change priority for a running process
