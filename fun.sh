@@ -72,6 +72,8 @@ case $lower in
 		;;
 	#pi
 	6)
+		printf "Pi Calculator\n"
+		printf "Warning higher numbers will take longer to calculate\n"
 		printf "How many numbers would you like to have displayed? "
 		read $number
 		pi $number
