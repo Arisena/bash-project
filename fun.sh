@@ -82,7 +82,7 @@ case $lower in
 		clear
 		;;
 	7)
-		exit
+		exit 0
 		;;
 	8)
 		shutdown
