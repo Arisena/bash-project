@@ -64,6 +64,23 @@ case $lower in
 		;;
 	#Contents of a Directory
 	3)
+		exists=0
+		printf "Directory Contents\n"
+		while [ $exists -eq 0 ]
+		do
+			printf "Full path may be required\n"
+			printf "What directory would you like to view? "
+			read dir
+			if [[ -d $(bash -c "echo $dir") ]]; then
+				echo -e $green"Directory Found"$white
+				ls $dir
+				printf "Press enter to continue"
+				read
+			else
+				echo -e $red"Directory Not Found"$white
+				sleep 4
+			fi
+		done
 		;;
 	#Man Pages
 	4)
