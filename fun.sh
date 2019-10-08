@@ -89,5 +89,10 @@ case $lower in
 	8)
 		shutdown
 		;;
+	*)
+		echo -e $red"Invalid Input"$white
+		sleep 2
+		clear
+		;;
 esac
 done

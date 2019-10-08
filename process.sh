@@ -66,5 +66,7 @@ case $lower in
 	6)
 		shutdown
 		;;
+	*)
+		;;
 esac
 done

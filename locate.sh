@@ -95,6 +95,8 @@ case $lower in
 		;;
 	*)
 		echo -e $red"Invalid Input"$white
+		sleep 2
+		clear
 		;;
 esac
 
