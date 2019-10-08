@@ -36,7 +36,7 @@ case $lower in
 	#Fortune
 	1)
 		fortune -ac
-		printf "Type Anything to Continue"
+		printf "Press enter to Continue"
 		read
 		clear
 		;;
@@ -55,7 +55,7 @@ case $lower in
 		cowsay -f ghostbusters Who you Gonna Call
 		echo
 		echo
-		printf "Type anything to continue"
+		printf "Press enter to continue"
 		read
 		clear
 		;;
@@ -66,7 +66,7 @@ case $lower in
 		figlet $text
 		printf "Output printed to 'figlet_output.txt'\n"
 		figlet $text >> figlet_output.txt
-		printf "Type anything to continue"
+		printf "Press enter to continue"
 		read
 		clear
 		;;
@@ -77,7 +77,7 @@ case $lower in
 		pi $number
 		printf "Output sent to pi_output.txt\n"
 		pi $number > pi_output.txt
-		printf "Type anything to continue"
+		printf "Press enter to continue"
 		read
 		clear
 		;;
