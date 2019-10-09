@@ -60,6 +60,8 @@ case $lower in
 		else
 			echo -e $red"Creation Failed"
 		fi
+		sleep 4
+		clear
 		;;
 	#Change User Group
 	2)
@@ -168,4 +170,5 @@ case $lower in
 		clear
 		;;
 esac
+printf $white
 done
