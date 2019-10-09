@@ -82,7 +82,7 @@ case $lower in
 		do
 			printf "What group would you like to put them in"
 			read group
-			if greo -q $group /etc/group
+			if grep -q $group /etc/group
 			then
 				echo -e $green"Groups exists"
 				exist2=1
