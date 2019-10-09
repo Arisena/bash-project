@@ -15,6 +15,10 @@ white='\e[0m'
 while [ -z "$go" ]
 do
 
+echo -e $gray"warning, some options need you to be an admin"
+echo -e $gray"please consult system administrator if something fails"
+echo -e $gray"waranty voided upon code modification"
+sleep 4
 clear
 
 menu=( '1. File Operations' '2. User Operations' '3. Locating Information' '4. Fun Stuff' '5. Process Menu' '6. Exit' '7. Shut down' )
