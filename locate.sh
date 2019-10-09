@@ -61,6 +61,21 @@ case $lower in
 		;;
 	#User Account Info
 	2)
+		exists=0
+		printf "User Account Info\n"
+		while [ $exists -eq 0 ]
+		do
+			printf "What user would you like to look at? "
+			read user
+			if grep -q $user /etc/passwd
+			then
+				echo -e $green"User Found"
+				exists=1
+			else
+				echo -e $red"User not Found"
+			fi
+		lslogins -u $user
+		done
 		;;
 	#Contents of a Directory
 	3)
