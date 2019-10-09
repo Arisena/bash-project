@@ -82,7 +82,7 @@ case $lower in
 		do
 			printf "What group would you like to put them in"
 			read group
-			if grep -q $group /etc/group
+			if grep -qw $group /etc/group
 			then
 				echo -e $green"Groups exists"
 				exist2=1
@@ -153,7 +153,7 @@ case $lower in
 				echo -e $red"User not found"
 			fi
 		done
-		echo -e "Staring Command"
+		echo -e $white"Staring Command"
 		passwd $user &> /dev/tty
 		;;
 	6)
