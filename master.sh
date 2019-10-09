@@ -12,9 +12,10 @@ cyan='\e[36m'
 gray='\e[37m'
 white='\e[0m'
 
-echo -e $gray"warning, some options need you to be an admin"
-echo -e $gray"please consult system administrator if something fails"
-echo -e $gray"waranty voided upon code modification"
+clear
+echo -e $gray"Warning, some options need you to be an admin"
+echo -e $gray"Please consult system administrator if something fails"
+echo -e $gray"Waranty voided upon code modification"
 sleep 4
 
 while [ -z "$go" ]
