@@ -74,7 +74,13 @@ case $lower in
 			else
 				echo -e $red"User not Found"
 			fi
-		lslogins -u $user
+		printf $white
+		printf "\n"
+		grep $user /etc/passwd --color=auto
+		printf "\n"
+		printf "Press Enter to Continue"
+		read
+		clear
 		done
 		;;
 	#Contents of a Directory
