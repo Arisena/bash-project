@@ -35,11 +35,11 @@
 
 ## locate.sh [ ] 
 - [x] 1.Find text within a file
-- [ ] 2.Show information about a user account
-- [ ] 3.List the contents of a directory
+- [x] 2.Show information about a user account
+- [x] 3.List the contents of a directory
 - [ ] 4.Bring up the man pages for a command
-- [ ] 5.Return to Main Menu
-- [ ] 6.Shut down
+- [x] 5.Return to Main Menu
+- [x] 6.Shut down
 - [ ] Colors
 
 ## process.sh [ ] 
