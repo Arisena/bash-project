@@ -56,7 +56,12 @@ case $lower in
 		;;
 	#top
 	3)
+		printf "Opening Top"
+		sleep 1
 		top
+		printf "Restarting Script"
+		sleep 1
+		clear
 		;;
 	#Change Priority
 	4)
