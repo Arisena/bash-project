@@ -14,6 +14,12 @@ white='\e[0m'
 
 clear
 
+printf $magenta"Warning : Some programs may not be installed on your current system\n"
+printf "Required Programs are as follows:\n"
+printf "fortune-mod, sl, cmatrix, cowsay, figlet, and cln\n"
+printf "Please contact your system administrator if some of these aren't installed\n"
+sleep 4
+
 while [ -z $go ]
 do
 
