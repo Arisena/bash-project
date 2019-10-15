@@ -19,6 +19,7 @@ printf "Required Programs are as follows:\n"
 printf "fortune-mod, sl, cmatrix, cowsay, figlet, and cln\n"
 printf "Please contact your system administrator if some of these aren't installed\n"
 sleep 4
+clear
 
 while [ -z $go ]
 do
