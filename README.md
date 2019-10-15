@@ -47,8 +47,8 @@
 - [x] 2.Kill a process
 - [x] 3.Bring up top
 - [ ] 4.Change priority for a running process
-- [ ] 5.Return to Main Menu
-- [ ] 6.Shut down
+- [x] 5.Return to Main Menu
+- [x] 6.Shut down
 - [ ] Colors
 
 ## fun.sh [x] 
