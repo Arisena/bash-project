@@ -43,7 +43,7 @@ case $lower in
 	#Fortune
 	1)
 		fortune -ac
-		printf "Press enter to Continue"
+		printf '%s%s%s%s' "$(tput setaf 2)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
 		read
 		clear
 		;;
@@ -62,7 +62,7 @@ case $lower in
 		cowsay -f ghostbusters Who you Gonna Call
 		echo
 		echo
-		printf "Press enter to continue"
+		printf '%s%s%s%s' "$(tput setaf 2)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
 		read
 		clear
 		;;
@@ -73,7 +73,7 @@ case $lower in
 		figlet $text
 		printf "Output printed to 'figlet_output.txt'\n"
 		figlet $text >> figlet_output.txt
-		printf "Press enter to continue"
+		printf '%s%s%s%s' "$(tput setaf 2)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
 		read
 		clear
 		;;
@@ -86,7 +86,7 @@ case $lower in
 		pi $number
 		printf "Output sent to pi_output.txt\n"
 		pi $number > pi_output.txt
-		printf "Press enter to continue"
+		printf '%s%s%s%s' "$(tput setaf 2)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
 		read
 		clear
 		;;
