@@ -39,8 +39,7 @@ case $lower in
 		printf "Starting 'ps'\n"
 		sleep 1
 		ps -e | less
-		printf '%s%s%s%s' "$(tput setaf 2)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
-		read
+		sleep 1
 		clear
 		;;
 	#Kill a Process
