@@ -45,7 +45,7 @@
 ## process.sh [ ] 
 - [x] 1.Show all processes
 - [x] 2.Kill a process
-- [ ] 3.Bring up top
+- [x] 3.Bring up top
 - [ ] 4.Change priority for a running process
 - [ ] 5.Return to Main Menu
 - [ ] 6.Shut down
