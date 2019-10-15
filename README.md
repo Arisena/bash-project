@@ -33,14 +33,14 @@
 - [x] 7.Shut down
 - [x] Colors
 
-## locate.sh [ ] 
+## locate.sh [x] 
 - [x] 1.Find text within a file
 - [x] 2.Show information about a user account
 - [x] 3.List the contents of a directory
-- [ ] 4.Bring up the man pages for a command
+- [x] 4.Bring up the man pages for a command
 - [x] 5.Return to Main Menu
 - [x] 6.Shut down
-- [ ] Colors
+- [x] Colors
 
 ## process.sh [ ] 
 - [x] 1.Show all processes
