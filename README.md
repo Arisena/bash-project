@@ -42,7 +42,7 @@
 - [x] 6.Shut down
 - [x] Colors
 
-## process.sh [ ] 
+## process.sh [x] 
 - [x] 1.Show all processes
 - [x] 2.Kill a process
 - [x] 3.Bring up top
