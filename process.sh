@@ -39,7 +39,7 @@ case $lower in
 		printf "Starting 'ps'\n"
 		sleep 1
 		ps -e | less
-		printf '%s%s%s%s' "$(tput setaf 3)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
+		printf '%s%s%s%s' "$(tput setaf 2)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
 		read
 		clear
 		;;
@@ -52,7 +52,7 @@ case $lower in
 		printf "What process would you like to kill? "
 		read $pid
 		kill $pid 2> /dev/tty
-		printf '%s%s%s%s' "$(tput setaf 3)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
+		printf '%s%s%s%s' "$(tput setaf 2)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
 		read
 		;;
 	#top
@@ -103,7 +103,7 @@ case $lower in
 		done
 		printf $white"Attempting to set nice level\n"
 		renice $level $pid &> /dev/tty
-		printf '%s%s%s%s' "$(tput setaf 3)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
+		printf '%s%s%s%s' "$(tput setaf 2)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
 		read
 		sleep 2
 		clear
