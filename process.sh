@@ -36,12 +36,11 @@ case $lower in
 	#Process View
 	1)
 		printf "Process View\n"
-		printf "Starting 'ps'"
+		printf "Starting 'ps'\n"
 		sleep 1
-		ps -e > ps_output.txt
 		ps -e | less
-		printf "Output has also been saved to ps_output.txt\n"
-		printf "Press enter to continue"
+		printf '%s%s%s%s' "$(tput setaf 3)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
+		read
 		clear
 		;;
 	#Kill a Process
@@ -53,6 +52,8 @@ case $lower in
 		printf "What process would you like to kill? "
 		read $pid
 		kill $pid 2> /dev/tty
+		printf '%s%s%s%s' "$(tput setaf 3)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
+		read
 		;;
 	#top
 	3)
@@ -102,6 +103,8 @@ case $lower in
 		done
 		printf $white"Attempting to set nice level\n"
 		renice $level $pid &> /dev/tty
+		printf '%s%s%s%s' "$(tput setaf 3)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
+		read
 		sleep 2
 		clear
 		;;

@@ -54,9 +54,8 @@ case $lower in
 		echo -e $white"Opening search results"
 		sleep 1
 		grep --color=auto -rn $text $file | less
-		echo -e $green"Output will be into search.txt for later use$white"
-		grep --color=auto -rn $text $file > search.txt
-		sleep 3
+		printf '%s%s%s%s' "$(tput setaf 3)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
+		read
 		clear
 		;;
 	#User Account Info
@@ -78,7 +77,7 @@ case $lower in
 		printf "\n"
 		grep $user /etc/passwd --color=auto
 		printf "\n"
-		printf "Press Enter to Continue"
+		printf '%s%s%s%s' "$(tput setaf 3)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
 		read
 		clear
 		done
@@ -96,7 +95,7 @@ case $lower in
 				echo -e $green"Directory Found"$white
 				ls --color --group-directories-first --classify $dir
 				exists=1
-				printf "Press enter to continue"
+				printf '%s%s%s%s' "$(tput setaf 3)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
 				read
 			else
 				echo -e $red"Directory Not Found"$white
@@ -143,7 +142,7 @@ case $lower in
 						echo -e $red"No Page Found"
 					fi
 				done
-				printf "Press Enter to Continue"
+				printf '%s%s%s%s' "$(tput setaf 3)" "$(tput blink)" "Press enter to continue" "$(tput sgr0)"
 				read
 				exists=1
 				clear
