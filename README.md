@@ -51,7 +51,7 @@
 - [ ] 6.Shut down
 - [ ] Colors
 
-## fun.sh [ ] 
+## fun.sh [x] 
 - [x] fortune
 - [x] sl
 - [x] cmatrix
@@ -60,7 +60,7 @@
 - [x] pi
 - [x] return to main menu
 - [x] shutdown
-- [ ] color
+- [x] color
 
 ## extra stuff to impliment
 - [x] Must be started from master.sh
