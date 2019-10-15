@@ -48,7 +48,7 @@ case $lower in
 	2)
 		printf "Process Kill Mode\n"
 		printf "Listing available processes\n"
-		ps -u
+		ps -au
 		printf "To kill a process look at the PID and input that\n"
 		printf "What process would you like to kill? "
 		read $pid
@@ -65,6 +65,45 @@ case $lower in
 		;;
 	#Change Priority
 	4)
+		exists1=0
+		exists2=0
+		printf "Priority Change Mode\n"
+		printf "Listing Available Processes\n"
+		printf "Please grab the PID from the list\n"
+		sleep 1
+		while [ $exists1 -eq 0 ]
+		do
+			ps -au | less
+			printf "What process would you like to change? "
+			read pid
+			if ps -au | grep $pid &> /dev/null
+			then
+				exists1=1
+				printf $green"Process Found\n"
+			else
+				printf $red"Process Not Found\n"
+			fi
+		done
+		printf $white"Now time to set the nice level\n"
+		sleep 1
+		while [ $exists2 -eq 0 ]
+		do
+			printf "Nice level can be from -20 to 19\n"
+			printf "Note root privelages needed to set negative priority\n"
+			printf "What would you like the nice level to be? "
+			read level
+			if [ $level -lt 20 ] && [ $level -gt -21 ];
+			then
+				printf $green"Nice level is in range\n"
+				exists2=1
+			else
+				printf $red"Nice level out of range\n"
+			fi
+		done
+		printf $white"Attempting to set nice level\n"
+		renice $level $pid &> /dev/tty
+		sleep 2
+		clear
 		;;
 	5)
 		exit 0
