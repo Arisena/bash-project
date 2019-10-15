@@ -15,8 +15,7 @@ white='\e[0m'
 clear
 echo -e $gray"Warning, some options need you to be an admin"
 echo -e $gray"Please consult system administrator if something fails"
-echo -e $gray"Waranty voided upon code modification"
-sleep 4
+sleep 3
 
 while [ -z "$go" ]
 do
