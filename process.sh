@@ -56,6 +56,7 @@ case $lower in
 		;;
 	#top
 	3)
+		top
 		;;
 	#Change Priority
 	4)
