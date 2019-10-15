@@ -46,10 +46,10 @@
 - [x] 1.Show all processes
 - [x] 2.Kill a process
 - [x] 3.Bring up top
-- [ ] 4.Change priority for a running process
+- [x] 4.Change priority for a running process
 - [x] 5.Return to Main Menu
 - [x] 6.Shut down
-- [ ] Colors
+- [x] Colors
 
 ## fun.sh [x] 
 - [x] fortune
