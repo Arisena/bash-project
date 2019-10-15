@@ -23,7 +23,7 @@ do
 
 clear
 
-menu=( '1. File Operations' '2. User Operations' '3. Locating Information' '4. Fun Stuff' '5. Process Menu' '6. Exit' '7. Shut down' )
+menu=( '1. File Operations' '2. User Operations' '3. Locating Information' '4. Process Menu' '5. Fun Stuff' '6. Exit' '7. Shut down' )
 
 echo -e $gray"Numbers Only"
 echo -e "$gray-MainMenu-"
@@ -47,10 +47,10 @@ case $lower in
 		./locate.sh 2> /dev/null
 		;;
 	4)
-		./fun.sh 2> /dev/null
+		./process.sh 2> /dev/null
 		;;
 	5)
-		./process.sh 2> /dev/null
+		./fun.sh 2> /dev/null
 		;;
 	6)
 		exit 0
