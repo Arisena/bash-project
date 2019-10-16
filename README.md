@@ -1,6 +1,6 @@
 # **Bash Project for Linux Server**
-#####Designed for Fedora 23 VM but built on Arch Linux
-#####Final Score 97/100
+##### Designed for Fedora 23 VM but built on Arch Linux
+##### Final Score 97/100
 
 ## master.sh [x] 
 - [x] 1.File operations
