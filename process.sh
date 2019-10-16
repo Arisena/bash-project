@@ -12,6 +12,20 @@ cyan='\e[36m'
 gray='\e[37m'
 white='\e[0m'
 
+trap ctrl_z sigtstp
+trap ctrl_c sigint
+
+function ctrl_z() {
+	echo
+	echo "error: sigtstp(ctrl_z) not supported"
+}
+function ctrl_c() {
+	echo
+	echo "sigint received"
+	echo "exiting program"
+	exit 1
+}
+
 clear
 
 while [ -z $go ]
