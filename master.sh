@@ -18,11 +18,10 @@ center() {
   printf '%*.*s %s %*.*s\n' 0 "$(((termwidth-2-${#1})/2))" "$padding" "$1" 0 "$(((termwidth-1-${#1})/2))" "$padding"
 }
 
-
-
 clear
-center $gray"Warning, some options need you to be an admin"
-center $gray"Please consult system administrator if something fails"
+printf $gray
+center "Warning, some options need you to be an admin"
+center "Please consult system administrator if something fails"
 sleep 3
 
 while [ -z "$go" ]
