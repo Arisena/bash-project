@@ -1,5 +1,7 @@
 #!/bin/bash
 
+dialog --title "Master.sh" --msgbox 'Version 6.9.37' 6 20
+
 export CALLED_FROM_START_APP=yes
 
 black='\e[30m'
