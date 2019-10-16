@@ -21,12 +21,12 @@ trap ctrl_c sigint
 
 function ctrl_z() {
 	echo
-	echo "error: sigtstp(ctrl_z) not supported"
+	echo "ERROR: SIGTSTP(ctrl_z) NOT SUPPORTED"
 }
 function ctrl_c() {
 	echo
-	echo "sigint received"
-	echo "exiting program"
+	echo "SIGINT RECEIVED"
+	echo "EXITING PROGRAM"
 	exit 1
 }
 
