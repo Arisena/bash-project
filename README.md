@@ -1,4 +1,5 @@
 # **Bash Project for Linux Server**
+##### Final Score 97/100
 
 ## master.sh [x] 
 - [x] 1.File operations
