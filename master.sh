@@ -1,6 +1,8 @@
 #!/bin/bash
 
-dialog --title "Master.sh" --msgbox 'Version 6.9.37' 6 20
+dialog --title "Master.sh" \
+	--backtitle 'Version 6.9.37' \
+	--msgbox 'Work in Progress, Proceed at your own risk' 7 25
 
 export CALLED_FROM_START_APP=yes
 
