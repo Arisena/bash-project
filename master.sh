@@ -28,7 +28,7 @@ echo -e $gray"Numbers Only"
 echo -e "$gray-MainMenu-"
 for element in "${menu[@]}"
 do
-	echo -e "$gray:$yellow $element $white"
+	echo -e $gray":$yellow "$element
 done
 echo -e "$gray----------"
 
