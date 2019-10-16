@@ -68,3 +68,4 @@
 - [x] Must be started from master.sh
 - [x] Error Suppression
 - [x] Blinking Text
+- [x] ctrl-z and ctrl-c trap
