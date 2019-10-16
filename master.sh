@@ -76,7 +76,7 @@ case $lower in
 		shutdown
 		;;
 	*)
-		echo $red"Invalid Input"
+		echo -e $red"Invalid Input"
 		sleep 4
 		;;
 esac
