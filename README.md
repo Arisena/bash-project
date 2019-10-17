@@ -1,4 +1,6 @@
 # **Bash Project for Linux Server**
+##### Designed for Fedora 23 VM but built on Arch Linux
+##### Final Score 97/100
 
 ## master.sh [x] 
 - [x] 1.File operations
@@ -66,3 +68,4 @@
 - [x] Must be started from master.sh
 - [x] Error Suppression
 - [x] Blinking Text
+- [x] ctrl-z and ctrl-c trap
